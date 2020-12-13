@@ -1,0 +1,30 @@
+release:
+  github:
+    owner: rishiosaur
+    name: 'sepia'
+  prerelease: auto
+before:
+  hooks:
+    - go mod download
+builds:
+  - goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm
+      - arm64
+    goarm:
+      - 6
+      - 7
+brews:
+  - tap:
+      owner: rishiosaur
+      name: homebrew-taps
+    folder: Formula
+    homepage: 'https://github.com/rishiosaur/sepia'
+    description: 'A minimal interpreted language.'
+    commit_author:
+      name: Rishi Kothari
+      email: itsrishikothari@gmail.com
