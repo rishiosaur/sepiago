@@ -1,5 +1,7 @@
-{
-  description = "A minimal functional programming language";
+let
+  description' = "A minimal functional programming language";
+in {
+  description = description';
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -14,7 +16,7 @@
       src = ./.;
       vendorSha256 = null;
       meta = with pkgs.lib; {
-        description = self.description;
+        description = description';
         homepage = "https://github.com/rishiosaur/sepiago";
         license = licenses.asl20;
         platforms = platforms.linux ++ platforms.darwin;
