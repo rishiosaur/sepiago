@@ -14,7 +14,7 @@
       src = ./.;
       vendorSha256 = null;
       meta = with pkgs.lib; {
-        description = self.description;
+        description = "A minimal functional programming language";
         homepage = "https://github.com/rishiosaur/sepiago";
         license = licenses.asl20;
         platforms = platforms.linux ++ platforms.darwin;
